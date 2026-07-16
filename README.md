@@ -12,6 +12,11 @@ validation rigor, and the numbers.
 > ₹8.3L total P&L on ~₹1.65L deployed margin — after brokerage, all government
 > charges, and honest settlement.**
 
+> **Status (Jul 2026):** the final portfolio is deployed and **algorithmically
+> paper-traded in real time** on a cloud box against live broker WebSocket feeds —
+> real quotes, simulated fills, full cost accounting — as the last validation stage
+> before capital.
+
 ![Equity curves](figures/equity_curves.png)
 ![Drawdown](figures/drawdown.png)
 ![Monthly P&L](figures/monthly_pnl.png)
