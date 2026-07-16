@@ -50,6 +50,27 @@ date-accurate government charges (STT / exchange txn / SEBI / stamp / GST).
 | Brokerage paid (NIFTY book, full sample) | ₹95k | — |
 | Govt charges (NIFTY book, full sample) | ₹14k | — |
 
+### Capital required, year by year
+
+Margin for the full book (2 NIFTY defined-risk legs + 2 BANKNIFTY MR lots), computed
+conservatively as spread max-loss + ~2% ELM with the credit ignored, using each year's
+average index level and the **actual lot sizes of that year** (NIFTY lot moved
+75 → 50 → 75 → 65 over the sample):
+
+| Year | Avg NIFTY | Avg BANKNIFTY | Per NIFTY leg | Per BNF lot | **Full book** | P&L that year |
+|---|---|---|---|---|---|---|
+| 2021 (H2) | 16,943 | 37,329 | ₹35k | ₹31k | **~₹1.33L** | +₹58k |
+| 2022 | 17,217 | 37,595 | ₹30k | ₹32k | **~₹1.23L** | +₹186k |
+| 2023 | 18,899 | 43,564 | ₹31k | ₹35k | **~₹1.33L** | +₹66k |
+| 2024 | 23,482 | 49,830 | ₹40k | ₹39k | **~₹1.57L** | +₹128k |
+| 2025 | 24,572 | 54,539 | ₹56k | ₹42k | **~₹1.95L** | +₹217k |
+| 2026 (H1) | 24,382 | 56,913 | ₹48k | ₹43k | **~₹1.82L** | +₹177k |
+
+Practical sizing: brokers add exposure margin and MTM buffers on top of SPAN, and the
+book must absorb a −₹60k drawdown without a margin call — **realistic capital is
+~₹2.5–3L today**, putting the honest full-sample return at **~45–65%/yr on trading
+capital** (the 75–105% on-margin figure is the theoretical ceiling).
+
 ### Slippage stress (the test most backtests skip)
 
 Every configuration was swept at 0.5 / 1.0 / 2.0 points slippage per leg per side.
